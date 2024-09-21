@@ -1,5 +1,5 @@
 // Массив с названиями звуковых файлов (без расширения)
-const soundFiles = ['600_700_km_na_skeyte', 'aaaaaaa', 'blin_krysa', 'blya_poigray', 'bolshaya_u_slona'];
+const soundFiles = ['600_700_km_na_skeyt', 'aaaaaaa', 'blin_krysa', 'blya_poigray', 'bolshaya_u_slona'];
 
 // Функция для отображения звуков на странице
 function displaySounds() {
