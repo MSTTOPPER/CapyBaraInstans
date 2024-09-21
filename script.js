@@ -1,5 +1,5 @@
 // Массив с названиями звуковых файлов (без расширения)
-const soundFiles = ['600_700_km_na_skeyt', 'aaaaaaa', 'blin_krysa', 'blya_poigray', 'bolshaya_u_slona'];
+const soundFiles = ['600_700_km_na_skeyte', 'aaaaaaa', 'blin_krysa', 'blya_poigray', 'bolshaya_u_slona'];
 
 // Функция для отображения звуков на странице
 function displaySounds() {
@@ -17,17 +17,12 @@ function displaySounds() {
     playButton.textContent = 'Играть';
     playButton.onclick = () => playSound(`sounds/${soundFile}.mp3`);
 
-    const pauseButton = document.createElement('button');
-    pauseButton.textContent = 'Пауза';
-    pauseButton.onclick = pauseSound;
-
     const stopButton = document.createElement('button');
     stopButton.textContent = 'Стоп';
     stopButton.onclick = stopSound;
 
     soundCard.appendChild(soundName);
     soundCard.appendChild(playButton);
-    soundCard.appendChild(pauseButton);
     soundCard.appendChild(stopButton);
 
     soundGrid.appendChild(soundCard);
@@ -43,12 +38,6 @@ function playSound(src) {
   }
   currentAudio = new Audio(src);
   currentAudio.play();
-}
-
-function pauseSound() {
-  if (currentAudio) {
-    currentAudio.pause();
-  }
 }
 
 function stopSound() {
